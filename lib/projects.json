@@ -1,0 +1,181 @@
+[
+  {
+    "id": "1",
+    "slug": "lstm-time-series-forecasting",
+    "title": "LSTM Time Series Forecasting for Stock Prices",
+    "description": "Advanced deep learning model for predicting stock price movements using LSTM neural networks",
+    "shortDescription": "Predicting stock market trends with LSTM neural networks",
+    "category": "time-series",
+    "categoryLabel": "Time Series",
+    "image": "/images/lstm-project.jpg",
+    "technologies": ["Python", "TensorFlow", "Keras", "Pandas", "NumPy"],
+    "date": "2024-01-15",
+    "featured": true,
+    "problem": "Stock price prediction is a challenging problem in financial forecasting. Traditional statistical models often fail to capture complex non-linear patterns in market data. This project aimed to build a deep learning model that could learn temporal dependencies and predict future stock prices with higher accuracy than baseline models.",
+    "approach": "I implemented a multi-layer LSTM (Long Short-Term Memory) neural network architecture with attention mechanisms. The model was trained on 5 years of historical stock data, using a sliding window approach to create sequential training samples. I normalized the data using MinMax scaling and split it into 80% training and 20% testing sets.",
+    "methodologies": [
+      "LSTM Architecture with 2 hidden layers (128 and 64 units)",
+      "Attention mechanism for temporal importance weighting",
+      "Min-Max normalization for feature scaling",
+      "Sliding window of 60 days for sequence creation",
+      "Adam optimizer with early stopping"
+    ],
+    "results": [
+      { "metric": "RMSE on Test Set", "value": "$2.45" },
+      { "metric": "MAE (Mean Absolute Error)", "value": "$1.87" },
+      { "metric": "Model Accuracy", "value": "72.3%" },
+      { "metric": "Direction Prediction Accuracy", "value": "68.9%" }
+    ],
+    "keyFindings": [
+      "LSTM models significantly outperformed ARIMA baseline (35% better RMSE)",
+      "Attention mechanisms improved directional accuracy by 8.5%",
+      "Model captures trend reversals better than traditional methods",
+      "Performance degrades slightly for predictions beyond 30 days"
+    ],
+    "tools": ["TensorFlow", "Keras", "Pandas", "NumPy", "Scikit-learn", "Matplotlib"],
+    "dataset": "Yahoo Finance Historical Data",
+    "datasetSize": "~1,250 trading days (5 years)",
+    "modelPerformance": [
+      { "metric": "RMSE", "value": 2.45, "unit": "USD" },
+      { "metric": "MAE", "value": 1.87, "unit": "USD" },
+      { "metric": "MAPE", "value": 3.42, "unit": "%" }
+    ],
+    "github": "https://github.com",
+    "notebook": "https://kaggle.com",
+    "live": ""
+  },
+  {
+    "id": "2",
+    "slug": "customer-churn-classification",
+    "title": "Customer Churn Prediction with Ensemble Methods",
+    "description": "Predicting customer churn using ensemble machine learning techniques and feature engineering",
+    "shortDescription": "Identifying at-risk customers with ensemble ML models",
+    "category": "machine-learning",
+    "categoryLabel": "Machine Learning",
+    "image": "/images/churn-project.jpg",
+    "technologies": ["Python", "Scikit-learn", "XGBoost", "Pandas", "SQL"],
+    "date": "2024-02-20",
+    "featured": true,
+    "problem": "A telecom company was experiencing 15-20% annual customer churn, leading to significant revenue loss. Predicting which customers are likely to churn would enable the company to implement targeted retention strategies. The challenge was to build an interpretable model that could identify key drivers of churn and provide actionable insights.",
+    "approach": "I developed a comprehensive machine learning pipeline starting with exploratory data analysis and feature engineering. I created 45 new features from raw data including customer lifetime value, engagement metrics, and behavioral patterns. Multiple ensemble models (Random Forest, Gradient Boosting, XGBoost, LightGBM) were trained and evaluated using cross-validation. SHAP values were used to explain model predictions.",
+    "methodologies": [
+      "Feature engineering with domain knowledge (45 new features)",
+      "Ensemble stacking with 5 base models",
+      "Stratified k-fold cross-validation (k=5)",
+      "SHAP feature importance analysis",
+      "Threshold optimization for business metrics",
+      "Class imbalance handling with SMOTE"
+    ],
+    "results": [
+      { "metric": "AUC-ROC Score", "value": "0.894" },
+      { "metric": "Precision", "value": "82.3%" },
+      { "metric": "Recall", "value": "78.9%" },
+      { "metric": "F1-Score", "value": "80.5%" }
+    ],
+    "keyFindings": [
+      "Top 3 churn drivers: contract type, monthly charges, and customer service calls",
+      "Customers with month-to-month contracts are 3x more likely to churn",
+      "Early intervention for customers with 4+ service calls improves retention by 35%",
+      "Model identifies 78.9% of actual churners while maintaining 82.3% precision"
+    ],
+    "tools": ["Scikit-learn", "XGBoost", "LightGBM", "SHAP", "Pandas", "SQL", "Matplotlib"],
+    "dataset": "Telecom Customer Data (kaggle)",
+    "datasetSize": "7,043 customers with 20 features",
+    "modelPerformance": [
+      { "metric": "AUC-ROC", "value": 0.894, "unit": "" },
+      { "metric": "Precision", "value": 82.3, "unit": "%" },
+      { "metric": "Recall", "value": 78.9, "unit": "%" }
+    ],
+    "github": "https://github.com",
+    "notebook": "https://kaggle.com",
+    "live": ""
+  },
+  {
+    "id": "3",
+    "slug": "sentiment-analysis-nlp",
+    "title": "Multi-lingual Sentiment Analysis with Transformers",
+    "description": "NLP project using transformer models for sentiment classification across multiple languages",
+    "shortDescription": "Analyzing sentiment in multiple languages using BERT",
+    "category": "nlp",
+    "categoryLabel": "NLP",
+    "image": "/images/nlp-project.jpg",
+    "technologies": ["Python", "Hugging Face", "PyTorch", "FastAPI", "Docker"],
+    "date": "2024-03-10",
+    "featured": false,
+    "problem": "Process and analyze customer reviews in 5 different languages to gauge overall product sentiment",
+    "approach": "Fine-tuned multilingual BERT model on custom dataset of 10,000 labeled reviews across English, Spanish, French, German, and Portuguese",
+    "methodologies": ["Transfer Learning", "BERT Fine-tuning", "Multi-class Classification"],
+    "results": [
+      { "metric": "F1-Score", "value": "0.91" },
+      { "metric": "Accuracy", "value": "89.5%" }
+    ],
+    "keyFindings": [
+      "Multilingual BERT outperforms language-specific models by 4.2%",
+      "Code-switching text requires special handling",
+      "User reviews show 73% positive sentiment overall"
+    ],
+    "tools": ["PyTorch", "Hugging Face", "FastAPI", "Docker"],
+    "dataset": "Customer Reviews Dataset",
+    "datasetSize": "10,000 reviews",
+    "github": "https://github.com",
+    "notebook": ""
+  },
+  {
+    "id": "4",
+    "slug": "image-classification-cnn",
+    "title": "Medical Image Classification with Convolutional Neural Networks",
+    "description": "Deep learning model for classifying chest X-rays and detecting anomalies",
+    "shortDescription": "Detecting diseases in medical imaging with CNNs",
+    "category": "computer-vision",
+    "categoryLabel": "Computer Vision",
+    "image": "/images/cv-project.jpg",
+    "technologies": ["Python", "PyTorch", "OpenCV", "NumPy", "Matplotlib"],
+    "date": "2024-04-05",
+    "featured": false,
+    "problem": "Assisting radiologists in detecting disease patterns in chest X-ray images",
+    "approach": "Built a ResNet50-based CNN architecture with custom training procedures and data augmentation",
+    "methodologies": ["Transfer Learning", "Data Augmentation", "Class Balancing"],
+    "results": [
+      { "metric": "Sensitivity", "value": "94.2%" },
+      { "metric": "Specificity", "value": "91.8%" }
+    ],
+    "keyFindings": [
+      "Model achieves radiologist-level performance on subset of conditions",
+      "Data augmentation critical for medical imaging tasks",
+      "Ensemble predictions improve reliability"
+    ],
+    "tools": ["PyTorch", "OpenCV", "NumPy"],
+    "dataset": "NIH Chest X-ray Dataset",
+    "datasetSize": "112,000 images",
+    "github": "https://github.com"
+  },
+  {
+    "id": "5",
+    "slug": "market-basket-analysis",
+    "title": "Market Basket Analysis for Retail Optimization",
+    "description": "Association rule mining and product recommendation engine for e-commerce",
+    "shortDescription": "Discovering product patterns to boost retail sales",
+    "category": "data-analysis",
+    "categoryLabel": "Data Analysis",
+    "image": "/images/analytics-project.jpg",
+    "technologies": ["Python", "MLxtend", "Pandas", "SQL", "Tableau"],
+    "date": "2024-04-20",
+    "featured": false,
+    "problem": "Optimize product placement and cross-sell strategies by understanding purchase patterns",
+    "approach": "Applied Apriori algorithm to transaction data to find frequent itemsets and association rules",
+    "methodologies": ["Apriori Algorithm", "Lift Analysis", "Confidence-Support Metrics"],
+    "results": [
+      { "metric": "Rules Generated", "value": "234" },
+      { "metric": "Average Lift", "value": "2.34" }
+    ],
+    "keyFindings": [
+      "Discovered 8 high-confidence product bundles with lift > 3.0",
+      "Product bundle strategy increased average order value by 18%",
+      "Seasonal patterns identified in customer purchases"
+    ],
+    "tools": ["Pandas", "MLxtend", "Tableau"],
+    "dataset": "Retail Transaction Data",
+    "datasetSize": "500,000 transactions",
+    "github": "https://github.com"
+  }
+]
