@@ -13,12 +13,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Link href={`/projects/${project.slug}`}>
       <div className="h-full rounded-2xl border-2 border-foreground overflow-hidden hover:-translate-y-2 transition-all hover:shadow-pop-hover group bg-white shadow-pop flex flex-col">
-        <div className="relative h-56 w-full overflow-hidden bg-foreground">
+        <div className="relative h-56 w-full overflow-hidden bg-white border-b-2 border-foreground">
           <Image
             src={project.image}
             alt={project.title}
             fill
-            className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+            className="object-contain p-4 group-hover:scale-105 transition-all duration-300"
           />
         </div>
 

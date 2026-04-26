@@ -1,124 +1,139 @@
 [
   {
     "id": "1",
-    "slug": "lstm-time-series-forecasting",
-    "title": "LSTM Time Series Forecasting for Stock Prices",
-    "description": "Advanced deep learning model for predicting stock price movements using LSTM neural networks",
-    "shortDescription": "Predicting stock market trends with LSTM neural networks",
-    "category": "time-series",
-    "categoryLabel": "Time Series",
-    "image": "/images/lstm-project.jpg",
-    "technologies": ["Python", "TensorFlow", "Keras", "Pandas", "NumPy"],
-    "date": "2024-01-15",
+    "slug": "games-classification",
+    "title": "Analisis Popularitas Game Online: Prediksi Interaksi Menggunakan Model Linear",
+    "description": "Proyek Data Science ini bertujuan untuk memprediksi tingkat popularitas sebuah video game berdasarkan metadata tekstual (Name, Description, Tags) menggunakan teknik Natural Language Processing (NLP) dan algoritma Logistic Regression.",
+    "shortDescription": "Memprediksi popularitas video game berdasarkan metadata tekstual menggunakan NLP dan Logistic Regression.",
+    "category": "machine-learning",
+    "categoryLabel": "Machine Learning",
+    "image": "/game_classification/Logistic.jpg",
+    "technologies": ["Python", "Scikit-learn", "NLP", "Pandas", "TF-IDF"],
+    "date": "2026-04-24",
     "featured": true,
-    "problem": "Stock price prediction is a challenging problem in financial forecasting. Traditional statistical models often fail to capture complex non-linear patterns in market data. This project aimed to build a deep learning model that could learn temporal dependencies and predict future stock prices with higher accuracy than baseline models.",
-    "approach": "I implemented a multi-layer LSTM (Long Short-Term Memory) neural network architecture with attention mechanisms. The model was trained on 5 years of historical stock data, using a sliding window approach to create sequential training samples. I normalized the data using MinMax scaling and split it into 80% training and 20% testing sets.",
+    "problem": "Masalah utama dalam platform distribusi game adalah banyaknya konten yang tersedia, sehingga sulit untuk memprediksi game mana yang akan mendapatkan interaksi tinggi (likes). Pengembang membutuhkan cara untuk memvalidasi potensi popularitas game sebelum peluncuran untuk mengoptimalkan strategi rilis.",
+    "approach": "Menggunakan metadata tekstual (nama, deskripsi, tag) untuk membangun model klasifikasi biner. Penentuan kelas (Populer vs Niche) dilakukan berdasarkan median likes untuk memastikan dataset yang seimbang. Model menggunakan TF-IDF untuk vektorisasi teks dan Logistic Regression (Linear Model) karena efektivitasnya dalam menangani data tekstual sparse.",
     "methodologies": [
-      "LSTM Architecture with 2 hidden layers (128 and 64 units)",
-      "Attention mechanism for temporal importance weighting",
-      "Min-Max normalization for feature scaling",
-      "Sliding window of 60 days for sequence creation",
-      "Adam optimizer with early stopping"
+      "TF-IDF Text Vectorization",
+      "Logistic Regression for Binary Classification",
+      "Median-based Class Labeling for Balanced Dataset",
+      "Learning Curve Analysis to ensure Good Fit",
+      "Confusion Matrix and Heatmap Visualization"
     ],
     "results": [
-      { "metric": "RMSE on Test Set", "value": "$2.45" },
-      { "metric": "MAE (Mean Absolute Error)", "value": "$1.87" },
-      { "metric": "Model Accuracy", "value": "72.3%" },
-      { "metric": "Direction Prediction Accuracy", "value": "68.9%" }
+      { "metric": "Model Accuracy", "value": "73%" },
+      { "metric": "Precision (Popular)", "value": "0.73" },
+      { "metric": "Recall (Popular)", "value": "0.73" },
+      { "metric": "Model Status", "value": "Good Fit (No Overfitting)" }
     ],
     "keyFindings": [
-      "LSTM models significantly outperformed ARIMA baseline (35% better RMSE)",
-      "Attention mechanisms improved directional accuracy by 8.5%",
-      "Model captures trend reversals better than traditional methods",
-      "Performance degrades slightly for predictions beyond 30 days"
+      "Genre 'Action', 'Multiplayer', dan 'Mobile' memiliki peluang popularitas lebih tinggi secara signifikan",
+      "Kata kunci 'brain', 'puzzle', dan 'steam' memiliki koefisien positif tertinggi dalam prediksi",
+      "Deskripsi yang mengandung mekanik game spesifik membantu algoritma pencarian dan interaksi pengguna",
+      "Model menunjukkan kurva belajar yang konvergen, menandakan kemampuan generalisasi yang kuat"
     ],
-    "tools": ["TensorFlow", "Keras", "Pandas", "NumPy", "Scikit-learn", "Matplotlib"],
-    "dataset": "Yahoo Finance Historical Data",
-    "datasetSize": "~1,250 trading days (5 years)",
+    "tools": ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
+    "dataset": "Online Gaming Metadata (Kaggle)",
+    "datasetSize": "~11,400 video games",
     "modelPerformance": [
-      { "metric": "RMSE", "value": 2.45, "unit": "USD" },
-      { "metric": "MAE", "value": 1.87, "unit": "USD" },
-      { "metric": "MAPE", "value": 3.42, "unit": "%" }
+      { "metric": "Accuracy", "value": 73, "unit": "%" },
+      { "metric": "Precision", "value": 0.73, "unit": "" },
+      { "metric": "Recall", "value": 0.73, "unit": "" }
     ],
-    "github": "https://github.com",
-    "notebook": "https://kaggle.com",
-    "live": ""
+    "github": "https://github.com/Gateofheaven07/games-classification-logistic-regression",
+    "notebook": "https://github.com/Gateofheaven07/games-classification-logistic-regression/blob/main/code.ipynb",
+    "live": "",
+    "datasetDownloadUrl": "/game_classification/dataset_online_gaming.csv",
+    "resultDownloadUrl": "/game_classification/hasil_classification_game_berdasarkan_likes.csv"
   },
   {
     "id": "2",
-    "slug": "customer-churn-classification",
-    "title": "Customer Churn Prediction with Ensemble Methods",
-    "description": "Predicting customer churn using ensemble machine learning techniques and feature engineering",
-    "shortDescription": "Identifying at-risk customers with ensemble ML models",
-    "category": "machine-learning",
-    "categoryLabel": "Machine Learning",
-    "image": "/images/churn-project.jpg",
-    "technologies": ["Python", "Scikit-learn", "XGBoost", "Pandas", "SQL"],
-    "date": "2024-02-20",
+    "slug": "plant-disease-detection",
+    "title": "Detektor Penyakit Pada Daun Tanaman (Vision AI)",
+    "description": "Aplikasi web berbasis Vision AI yang dirancang untuk diagnosis cepat penyakit pada daun tanaman. Memberikan solusi pertanian presisi dengan memberikan hasil analisis instan beserta rekomendasi penanganan agronomi.",
+    "shortDescription": "Diagnosis penyakit tanaman secara real-time menggunakan Deep Learning dan Vision AI.",
+    "category": "computer-vision",
+    "categoryLabel": "Computer Vision",
+    "image": "/computer_vision.jpg",
+    "technologies": ["Next.js", "Python", "Flask", "Vision AI", "Gradio"],
+    "date": "2026-04-26",
     "featured": true,
-    "problem": "A telecom company was experiencing 15-20% annual customer churn, leading to significant revenue loss. Predicting which customers are likely to churn would enable the company to implement targeted retention strategies. The challenge was to build an interpretable model that could identify key drivers of churn and provide actionable insights.",
-    "approach": "I developed a comprehensive machine learning pipeline starting with exploratory data analysis and feature engineering. I created 45 new features from raw data including customer lifetime value, engagement metrics, and behavioral patterns. Multiple ensemble models (Random Forest, Gradient Boosting, XGBoost, LightGBM) were trained and evaluated using cross-validation. SHAP values were used to explain model predictions.",
+    "problem": "Kesulitan dalam mendiagnosis penyakit tanaman secara tepat waktu sering mengakibatkan kerugian panen yang signifikan bagi petani. Diperlukan alat bantu digital yang dapat memberikan diagnosa akurat hanya melalui unggahan foto daun.",
+    "approach": "Memanfaatkan model Deep Learning untuk klasifikasi gambar yang dihosting di Hugging Face. Backend Flask bertindak sebagai jembatan melalui Gradio API untuk memproses gambar dan mengirimkan hasil prediksi serta panduan perawatan ke frontend Next.js.",
     "methodologies": [
-      "Feature engineering with domain knowledge (45 new features)",
-      "Ensemble stacking with 5 base models",
-      "Stratified k-fold cross-validation (k=5)",
-      "SHAP feature importance analysis",
-      "Threshold optimization for business metrics",
-      "Class imbalance handling with SMOTE"
+      "Convolutional Neural Network (CNN) for Classification",
+      "Real-time API Integration (Gradio Client)",
+      "Image Validation Logic for Non-Leaf Detection",
+      "Agronomic Database for Disease Treatment Guides",
+      "Responsive UI/UX for Field Use"
     ],
     "results": [
-      { "metric": "AUC-ROC Score", "value": "0.894" },
-      { "metric": "Precision", "value": "82.3%" },
-      { "metric": "Recall", "value": "78.9%" },
-      { "metric": "F1-Score", "value": "80.5%" }
+      { "metric": "Prediction Latency", "value": "1.5s" },
+      { "metric": "Crops Supported", "value": "10 Types" },
+      { "metric": "Output Confidence", "value": "Real-time Score" },
+      { "metric": "Treatment Info", "value": "Comprehensive" }
     ],
     "keyFindings": [
-      "Top 3 churn drivers: contract type, monthly charges, and customer service calls",
-      "Customers with month-to-month contracts are 3x more likely to churn",
-      "Early intervention for customers with 4+ service calls improves retention by 35%",
-      "Model identifies 78.9% of actual churners while maintaining 82.3% precision"
+      "Aplikasi berhasil mengidentifikasi penyakit pada Grapes, Apples, Corn, Potatoes, dan 6 tanaman lainnya",
+      "Metode validasi gambar daun secara spesifik meningkatkan keandalan sistem sebelum klasifikasi dilakukan",
+      "Integrasi Gradio API memungkinkan pembaruan model di sisi cloud tanpa mengganggu operasional frontend",
+      "Rekomendasi pencegahan dan perawatan yang diberikan sangat membantu pengguna non-ahli dalam manajemen tanaman"
     ],
-    "tools": ["Scikit-learn", "XGBoost", "LightGBM", "SHAP", "Pandas", "SQL", "Matplotlib"],
-    "dataset": "Telecom Customer Data (kaggle)",
-    "datasetSize": "7,043 customers with 20 features",
+    "tools": ["Next.js", "TypeScript", "Python", "Flask", "Hugging Face", "Tailwind CSS"],
+    "dataset": "PlantVillage & Custom Augmented Dataset",
+    "datasetSize": "Thousands of labeled plant leaf images",
     "modelPerformance": [
-      { "metric": "AUC-ROC", "value": 0.894, "unit": "" },
-      { "metric": "Precision", "value": 82.3, "unit": "%" },
-      { "metric": "Recall", "value": 78.9, "unit": "%" }
+      { "metric": "Inference Time", "value": 1.5, "unit": "s" },
+      { "metric": "Crop Accuracy", "value": 94, "unit": "%" },
+      { "metric": "Validation Precision", "value": 0.92, "unit": "" }
     ],
-    "github": "https://github.com",
-    "notebook": "https://kaggle.com",
-    "live": ""
+    "github": "https://github.com/Gateofheaven07/plant_disease",
+    "notebook": "",
+    "live": "https://plant-disease-frontend-mu.vercel.app/"
   },
   {
     "id": "3",
-    "slug": "sentiment-analysis-nlp",
-    "title": "Multi-lingual Sentiment Analysis with Transformers",
-    "description": "NLP project using transformer models for sentiment classification across multiple languages",
-    "shortDescription": "Analyzing sentiment in multiple languages using BERT",
-    "category": "nlp",
-    "categoryLabel": "NLP",
-    "image": "/images/nlp-project.jpg",
-    "technologies": ["Python", "Hugging Face", "PyTorch", "FastAPI", "Docker"],
-    "date": "2024-03-10",
-    "featured": false,
-    "problem": "Process and analyze customer reviews in 5 different languages to gauge overall product sentiment",
-    "approach": "Fine-tuned multilingual BERT model on custom dataset of 10,000 labeled reviews across English, Spanish, French, German, and Portuguese",
-    "methodologies": ["Transfer Learning", "BERT Fine-tuning", "Multi-class Classification"],
+    "slug": "california-housing-forecast",
+    "title": "California Housing Price Prediction: End-to-End ML",
+    "description": "Proyek studi kasus End-to-End Machine Learning yang berfokus pada prediksi harga rumah rata-rata di California. Proyek ini mengeksplorasi faktor-faktor pendorong nilai properti dengan menangani pola non-linear melalui algoritma ensemble.",
+    "shortDescription": "Prediksi harga rumah di California menggunakan Random Forest Regressor dan Feature Engineering.",
+    "category": "machine-learning",
+    "categoryLabel": "Machine Learning",
+    "image": "/house_forecast/rf-regression.jpg",
+    "technologies": ["Python", "Scikit-Learn", "Random Forest", "Pandas", "Feature Engineering"],
+    "date": "2026-04-26",
+    "featured": true,
+    "problem": "Dataset sensus California memiliki tantangan berupa data yang terpotong (price capping), nilai yang hilang, dan hubungan antar fitur yang kompleks dan non-linear, sehingga model regresi sederhana tidak cukup akurat.",
+    "approach": "Melakukan pembersihan data secara menyeluruh dan rekayasa fitur (seperti rasio kamar per rumah tangga). Menggunakan algoritma Random Forest Regression untuk menangkap kompleksitas data dan melakukan evaluasi mendalam menggunakan RMSE untuk meminimalkan error prediksi.",
+    "methodologies": [
+      "End-to-End ML Pipeline Architecture",
+      "Feature Engineering for Informational Weight",
+      "Random Forest Regression Ensemble",
+      "Residual and Correlation Analysis",
+      "Handling Price Capped Data"
+    ],
     "results": [
-      { "metric": "F1-Score", "value": "0.91" },
-      { "metric": "Accuracy", "value": "89.5%" }
+      { "metric": "R2 Score", "value": "81.04%" },
+      { "metric": "RMSE", "value": "$49,848" },
+      { "metric": "Main Driver", "value": "Median Income" },
+      { "metric": "Prediction Focus", "value": "Mid-range Properties" }
     ],
     "keyFindings": [
-      "Multilingual BERT outperforms language-specific models by 4.2%",
-      "Code-switching text requires special handling",
-      "User reviews show 73% positive sentiment overall"
+      "Pendapatan median (Median Income) terbukti menjadi faktor paling deterministik dalam nilai properti",
+      "Penggunaan Random Forest menurunkan RMSE secara drastis dibandingkan Linear Regression",
+      "Model sangat handal untuk prediksi rumah dalam rentang harga $150,000 hingga $350,000",
+      "Penerapan rekayasa fitur rasio terbukti memberikan informasi yang lebih kaya bagi model"
     ],
-    "tools": ["PyTorch", "Hugging Face", "FastAPI", "Docker"],
-    "dataset": "Customer Reviews Dataset",
-    "datasetSize": "10,000 reviews",
-    "github": "https://github.com",
-    "notebook": ""
+    "tools": ["Python", "Scikit-Learn", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
+    "dataset": "California Housing Census Data",
+    "datasetSize": "~20,640 records",
+    "modelPerformance": [
+      { "metric": "R2 Score", "value": 81.04, "unit": "%" },
+      { "metric": "RMSE", "value": 49848, "unit": "USD" }
+    ],
+    "github": "https://github.com/Gateofheaven07/forecasting-house-california",
+    "notebook": "https://github.com/Gateofheaven07/forecasting-house-california/blob/main/code.ipynb",
+    "datasetDownloadUrl": "/house_forecast/dataset.csv"
   },
   {
     "id": "4",

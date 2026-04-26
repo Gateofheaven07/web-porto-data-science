@@ -30,8 +30,7 @@ export function Hero() {
 
           <div className="relative translate-y-8 sm:translate-y-12 z-20">
             <p className="text-lg sm:text-xl text-foreground font-medium max-w-2xl mx-auto mb-10 leading-relaxed bg-white/80 backdrop-blur-sm border-2 border-foreground rounded-2xl p-6 shadow-soft-pop">
-              Building intelligent systems and uncovering insights from data. Specializing in
-            deep learning, time series forecasting, and predictive analytics.
+              Membangun sistem cerdas dan menemukan wawasan dari data. Mengkhususkan diri dalam pembelajaran mendalam, peramalan deret waktu, dan analisis prediktif.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
@@ -55,7 +54,7 @@ export function Hero() {
 
           <div className="flex justify-center gap-6">
             <a
-              href="https://github.com"
+              href="https://github.com/Gateofheaven07"
               target="_blank"
               rel="noopener noreferrer"
               className="w-14 h-14 flex items-center justify-center bg-white border-2 border-foreground rounded-full shadow-pop hover:-translate-y-1 hover:shadow-pop-hover transition-all text-foreground"
@@ -63,7 +62,7 @@ export function Hero() {
               <Github className="w-6 h-6" strokeWidth={2.5} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/taufikramlan"
               target="_blank"
               rel="noopener noreferrer"
               className="w-14 h-14 flex items-center justify-center bg-tertiary border-2 border-foreground rounded-full shadow-pop hover:-translate-y-1 hover:shadow-pop-hover transition-all text-foreground"

@@ -3,23 +3,25 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Github, ExternalLink } from "lucide-react";
-import projects from "@/lib/projects.json";
+import { ArrowLeft, Github, ExternalLink, Download } from "lucide-react";
+import projectsData from "@/lib/projects.json";
 import type { Project } from "@/lib/types";
+
+const projects = projectsData as Project[];
 
 interface ProjectDetailPageProps {
   params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-  return projects.map((project: Project) => ({
+  return projects.map((project) => ({
     slug: project.slug,
   }));
 }
 
 export async function generateMetadata({ params }: ProjectDetailPageProps) {
   const { slug } = await params;
-  const project = (projects as Project[]).find((p) => p.slug === slug);
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
     return {
@@ -42,13 +44,13 @@ export default async function ProjectDetailPage({
   params,
 }: ProjectDetailPageProps) {
   const { slug } = await params;
-  const project = (projects as Project[]).find((p) => p.slug === slug);
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();
   }
 
-  const relatedProjects = (projects as Project[])
+  const relatedProjects = projects
     .filter(
       (p) => p.category === project.category && p.id !== project.id
     )
@@ -57,14 +59,20 @@ export default async function ProjectDetailPage({
   return (
     <div>
       {/* Hero Image */}
-      <div className="relative h-96 w-full bg-slate-100">
-        <Image
-          src={project.image}
-          alt={project.title}
-          fill
-          className="object-cover"
-          priority
-        />
+      <div className="w-full border-b-2 border-foreground bg-slate-50 py-8 lg:py-12">
+        <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl border-2 border-foreground shadow-pop overflow-hidden bg-white">
+            <Image
+              src={project.image}
+              alt={project.title}
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="w-full h-auto"
+              priority
+            />
+          </div>
+        </div>
       </div>
 
       {/* Content */}
@@ -112,6 +120,22 @@ export default async function ProjectDetailPage({
                 <Button className="gap-2">
                   <ExternalLink className="w-4 h-4" />
                   View Live
+                </Button>
+              </a>
+            )}
+            {project.datasetDownloadUrl && (
+              <a href={project.datasetDownloadUrl} download>
+                <Button variant="outline" className="gap-2 border-2 border-foreground shadow-pop hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
+                  <Download className="w-4 h-4" />
+                  Download Dataset
+                </Button>
+              </a>
+            )}
+            {project.resultDownloadUrl && (
+              <a href={project.resultDownloadUrl} download>
+                <Button variant="outline" className="gap-2 border-2 border-foreground shadow-pop hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
+                  <Download className="w-4 h-4" />
+                  Download Result
                 </Button>
               </a>
             )}
@@ -272,12 +296,12 @@ export default async function ProjectDetailPage({
               {relatedProjects.map((relProject) => (
                 <Link key={relProject.id} href={`/projects/${relProject.slug}`}>
                   <div className="h-full rounded-lg border border-slate-200 overflow-hidden hover:border-blue-400 transition-all hover:shadow-lg group">
-                    <div className="relative h-40 w-full overflow-hidden bg-slate-100">
+                    <div className="relative h-40 w-full overflow-hidden bg-slate-50 border-b border-slate-200">
                       <Image
                         src={relProject.image}
                         alt={relProject.title}
                         fill
-                        className="object-cover group-hover:scale-105 transition-transform"
+                        className="object-contain p-2 group-hover:scale-105 transition-transform"
                       />
                     </div>
                     <div className="p-4">

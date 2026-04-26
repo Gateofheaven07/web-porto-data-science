@@ -75,7 +75,7 @@ export function Footer() {
 
         <div className="pt-6">
           <p className="text-base font-bold text-foreground text-center">
-            © {currentYear} Data Science Portfolio. All rights reserved.
+            © {currentYear} Taufik Ramlan Alfiansyah. Data Science Portfolio.
           </p>
         </div>
       </div>

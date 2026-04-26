@@ -33,6 +33,10 @@ export interface Project {
   github?: string;
   notebook?: string;
   live?: string;
+  
+  // Download Links
+  datasetDownloadUrl?: string;
+  resultDownloadUrl?: string;
 }
 
 export interface FilterState {

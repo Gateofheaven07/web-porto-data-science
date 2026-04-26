@@ -13,10 +13,7 @@ export function Header() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-12 h-12 rounded-xl bg-accent border-2 border-foreground shadow-pop flex items-center justify-center group-hover:-translate-y-1 transition-transform">
-              <span className="text-white font-extrabold text-xl">DS</span>
-            </div>
-            <span className="font-extrabold font-heading text-2xl hidden sm:inline text-foreground ml-1 group-hover:text-accent transition-colors">Data Science</span>
+            <span className="font-extrabold font-heading text-2xl hidden sm:inline text-foreground ml-1 group-hover:text-accent transition-colors">Taufik Ramlan Alfiansyah</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -33,7 +30,7 @@ export function Header() {
           </nav>
 
           <div className="hidden md:block">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Gateofheaven07" target="_blank" rel="noopener noreferrer">
               <Button className="border-2 border-foreground shadow-pop bg-white text-foreground hover:-translate-y-1 hover:shadow-pop-hover transition-all font-bold">
                 GitHub
               </Button>
@@ -71,7 +68,7 @@ export function Header() {
                 Contact
               </a>
               <div className="pt-6 border-t-4 border-foreground">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" onClick={() => setIsSidebarOpen(false)}>
+                <a href="https://github.com/Gateofheaven07" target="_blank" rel="noopener noreferrer" onClick={() => setIsSidebarOpen(false)}>
                   <Button className="w-full justify-center border-2 border-foreground shadow-pop bg-secondary text-foreground hover:-translate-y-1 hover:shadow-pop transition-all font-bold text-lg py-6">
                     GitHub
                   </Button>

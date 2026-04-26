@@ -16,10 +16,10 @@ export default function Home() {
         <div className="absolute top-0 right-0 w-64 h-64 bg-accent rounded-full -z-10 translate-x-1/2 -translate-y-1/2 border-4 border-foreground mix-blend-multiply opacity-50"></div>
         <div className="max-w-4xl mx-auto text-center relative z-10 p-10 sm:p-16 bg-white rounded-3xl border-4 border-foreground shadow-pop">
           <h2 className="text-4xl sm:text-5xl font-extrabold font-heading text-foreground mb-6">
-            Interested in working together?
+            Tertarik untuk bekerja sama?
           </h2>
           <p className="text-xl text-foreground font-medium mb-10 max-w-2xl mx-auto">
-            Let's collaborate on your next data science or machine learning project.
+            Mari berkolaborasi dalam proyek data science atau machine learning berikutnya.
           </p>
           <a
             href="mailto:contact@example.com"
