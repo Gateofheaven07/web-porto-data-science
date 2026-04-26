@@ -23,8 +23,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
             Featured Projects
           </h2>
           <p className="text-lg text-foreground font-medium max-w-2xl bg-secondary/30 p-5 rounded-2xl border-2 border-foreground shadow-soft-pop">
-            A selection of my recent machine learning and data science projects
-            showcasing real-world applications and advanced techniques.
+            Sekumpulan project pembelajaran mesin dan ilmu data terbaru saya yang menampilkan aplikasi dunia nyata.
           </p>
         </div>
 

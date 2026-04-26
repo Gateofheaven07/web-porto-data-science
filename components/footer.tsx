@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -29,9 +31,9 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-base font-medium text-foreground hover:text-accent hover:underline transition-colors">
+                <Link href="/contact" className="text-base font-medium text-foreground hover:text-accent hover:underline transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -61,12 +63,12 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://twitter.com"
+                  href="https://www.instagram.com/taufikrmlnn"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-base font-medium text-foreground hover:text-accent hover:underline transition-colors"
                 >
-                  Twitter
+                  Instagram
                 </a>
               </li>
             </ul>

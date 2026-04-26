@@ -13,7 +13,9 @@ export function Header() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center gap-2 group">
-            <span className="font-extrabold font-heading text-2xl hidden sm:inline text-foreground ml-1 group-hover:text-accent transition-colors">Taufik Ramlan Alfiansyah</span>
+            <span className="font-extrabold font-heading text-[1.35rem] sm:text-[1.6rem] text-foreground ml-1 group-hover:text-accent transition-colors">
+  Taufik Ramlan Alfiansyah
+</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -24,9 +26,9 @@ export function Header() {
             <Link href="/projects" className="text-base font-bold text-foreground hover:text-accent transition-colors border-b-2 border-transparent hover:border-accent pb-1">
               Projects
             </Link>
-            <a href="#contact" className="text-base font-bold text-foreground hover:text-accent transition-colors border-b-2 border-transparent hover:border-accent pb-1">
+            <Link href="/contact" className="text-base font-bold text-foreground hover:text-accent transition-colors border-b-2 border-transparent hover:border-accent pb-1">
               Contact
-            </a>
+            </Link>
           </nav>
 
           <div className="hidden md:block">
@@ -64,9 +66,9 @@ export function Header() {
               <Link href="/projects" onClick={() => setIsSidebarOpen(false)} className="text-xl font-bold text-foreground hover:text-accent border-b-4 border-transparent hover:border-foreground w-fit pb-1 transition-all">
                 Projects
               </Link>
-              <a href="#contact" onClick={() => setIsSidebarOpen(false)} className="text-xl font-bold text-foreground hover:text-accent border-b-4 border-transparent hover:border-foreground w-fit pb-1 transition-all">
+              <Link href="/contact" onClick={() => setIsSidebarOpen(false)} className="text-xl font-bold text-foreground hover:text-accent border-b-4 border-transparent hover:border-foreground w-fit pb-1 transition-all">
                 Contact
-              </a>
+              </Link>
               <div className="pt-6 border-t-4 border-foreground">
                 <a href="https://github.com/Gateofheaven07" target="_blank" rel="noopener noreferrer" onClick={() => setIsSidebarOpen(false)}>
                   <Button className="w-full justify-center border-2 border-foreground shadow-pop bg-secondary text-foreground hover:-translate-y-1 hover:shadow-pop transition-all font-bold text-lg py-6">
