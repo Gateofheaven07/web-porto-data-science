@@ -192,5 +192,58 @@
     "dataset": "Retail Transaction Data",
     "datasetSize": "500,000 transactions",
     "github": "https://github.com"
+  },
+  {
+    "id": "6",
+    "slug": "smartwatch-campaign",
+    "title": "Smart Fitness Watch Campaign Prediction",
+    "description": "Proyek machine learning dan business intelligence untuk mengoptimalkan campaign peluncuran Smart Fitness Watch. Analisis ini menggabungkan business understanding, data transaksi e-commerce, customer behavior, coupon usage, dan model Logistic Regression untuk menentukan customer yang paling potensial menjadi target campaign.",
+    "shortDescription": "Optimasi target campaign Smart Fitness Watch menggunakan business intelligence, customer segmentation, dan Logistic Regression.",
+    "category": "machine-learning",
+    "categoryLabel": "Machine Learning",
+    "image": "/smartwatch_campaign/smartwatch-campaign.jpeg",
+    "technologies": ["Python", "Pandas", "Scikit-Learn", "Business Intelligence", "Logistic Regression"],
+    "date": "2026-05-22",
+    "featured": false,
+    "problem": "Tim marketing butuh optimasi untuk peluncuran produk baru di bulan depan agar target customer nya sesuai.",
+    "approach": "Project dimulai dari business understanding untuk memahami tujuan campaign, segment customer, risiko pemborosan budget, dan target conversion. Business intelligence digunakan untuk menggabungkan data transaksi, customer, coupon, pajak, dan marketing spend menjadi insight operasional. Setelah data cleaning, data merging, feature engineering, dan EDA, model Logistic Regression dibangun untuk memprediksi customer yang berpotensi tinggi membeli Smart Fitness Watch dan menghasilkan rekomendasi target campaign berbasis data.",
+    "methodologies": [
+      "Business Understanding",
+      "Business Intelligence Analysis",
+      "Data Cleaning and Data Merging",
+      "Feature Engineering",
+      "Exploratory Data Analysis",
+      "Customer Segmentation",
+      "Logistic Regression Binary Classification",
+      "Campaign Target Recommendation"
+    ],
+    "results": [
+      { "metric": "Accuracy", "value": "95.6%" },
+      { "metric": "Precision", "value": "94.2%" },
+      { "metric": "Recall", "value": "87.8%" },
+      { "metric": "F1 Score", "value": "90.9%" },
+      { "metric": "High Potential Customers", "value": "346 customers" }
+    ],
+    "keyFindings": [
+      "Customer tech buyer memiliki spending jauh lebih tinggi dibanding non-tech buyer",
+      "Customer aktif dengan recency_days rendah lebih bernilai untuk campaign",
+      "Coupon usage menjadi sinyal penting untuk promo smartwatch",
+      "High spender dan active customer menjadi segment prioritas",
+      "Targeted campaign dapat mengurangi pemborosan budget dibanding campaign ke seluruh customer"
+    ],
+    "tools": ["Python", "Pandas", "NumPy", "Matplotlib", "Scikit-Learn", "Jupyter Notebook"],
+    "dataset": "E-commerce Customer, Transaction, Coupon, Tax, and Marketing Spend Data",
+    "datasetSize": "1,467 customers and 52,924 transactions",
+    "modelPerformance": [
+      { "metric": "Accuracy", "value": 95.6, "unit": "%" },
+      { "metric": "Precision", "value": 94.2, "unit": "%" },
+      { "metric": "Recall", "value": 87.8, "unit": "%" },
+      { "metric": "F1 Score", "value": 90.9, "unit": "%" },
+      { "metric": "Target Customers", "value": 346, "unit": "customers" }
+    ],
+    "github": "https://github.com/Gateofheaven07/smartwatch-campaign",
+    "notebook": "https://github.com/Gateofheaven07/smartwatch-campaign/blob/main/code.ipynb",
+    "datasetDownloadUrl": "https://github.com/Gateofheaven07/smartwatch-campaign",
+    "resultDownloadUrl": "/smartwatch_campaign/high_potential_customers.csv"
   }
 ]

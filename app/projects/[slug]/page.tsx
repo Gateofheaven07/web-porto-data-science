@@ -9,6 +9,11 @@ import type { Project } from "@/lib/types";
 
 const projects = projectsData as Project[];
 
+function getDownloadFileName(url: string) {
+  const pathname = url.startsWith("http") ? new URL(url).pathname : url;
+  return pathname.split("/").pop() || undefined;
+}
+
 interface ProjectDetailPageProps {
   params: Promise<{ slug: string }>;
 }
@@ -124,7 +129,7 @@ export default async function ProjectDetailPage({
               </a>
             )}
             {project.datasetDownloadUrl && (
-              <a href={project.datasetDownloadUrl} download>
+              <a href={project.datasetDownloadUrl} download={getDownloadFileName(project.datasetDownloadUrl)}>
                 <Button variant="outline" className="gap-2 border-2 border-foreground shadow-pop hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
                   <Download className="w-4 h-4" />
                   Download Dataset
@@ -132,7 +137,7 @@ export default async function ProjectDetailPage({
               </a>
             )}
             {project.resultDownloadUrl && (
-              <a href={project.resultDownloadUrl} download>
+              <a href={project.resultDownloadUrl} download={getDownloadFileName(project.resultDownloadUrl)}>
                 <Button variant="outline" className="gap-2 border-2 border-foreground shadow-pop hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
                   <Download className="w-4 h-4" />
                   Download Result
